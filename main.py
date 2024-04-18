@@ -3,10 +3,10 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
 
 def predict_sentiment(text):
-    model = tf.keras.models.load_model('D:/Vietnamese-Review-Classification/models/review_model.keras')
+    model = tf.keras.models.load_model('C:/Users/nguye/Downloads/Vietnamese-Review-Classification/models/review_model.keras')
 
     tokenizer = None
-    with open("D:/Vietnamese-Review-Classification/models/review_tokenizer.pkl", "rb") as f:
+    with open("C:/Users/nguye/Downloads/Vietnamese-Review-Classification/models/review_tokenizer.pkl", "rb") as f:
         tokenizer = pickle.load(f)
     max_len = 200
     sequence = tokenizer.texts_to_sequences([text])
@@ -18,4 +18,3 @@ def predict_sentiment(text):
     print(predicted_class)
 
 predict_sentiment('sản phẩm như cái lồn')
-
