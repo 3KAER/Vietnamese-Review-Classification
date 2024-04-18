@@ -1,9 +1,6 @@
 import csv
 from .data_prepropressing import preprocessing
 
-import csv
-from .data_preprocessing import preprocessing
-
 def prepare_data(file_paths):
     print("Preparing data...")
     x_data = []
